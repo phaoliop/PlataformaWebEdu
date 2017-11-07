@@ -25,7 +25,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
 
-    <!--link rel="stylesheet" href="css/style.css"-->
+    <link rel="stylesheet" href="css/style.css">
     
 </head>  
 <body>  
@@ -35,7 +35,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                <a href="index.html"><img src="" alt="Plataforma Educativa" class="img-responsive logo"></a>
+                <a href="index.html"><img src="assets/img/logo-dark.png" alt="Plataforma Educativa" class="img-responsive logo"></a>
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
@@ -149,24 +149,24 @@
                     <!--Breadcrumb-->
                     <div>
                         <ol class="breadcrumb">
-                            <li><a href="index.html"><span class="label label-primary">Inicio</span></a></li>
-                            <li class="active"><span class="label label-default">Cursos</span></li>
+                            <li><a href="index.html"><span >Inicio</span></a></li>
+                            <li class="active"><span >Mis Cursos</span></li>
                         </ol>
                     </div>
                     <!--Fin Breadcrumb-->
                     
                     <!--Custom content-->
                     <div class="row">
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
                             <div class="thumbnail">
                               <div class="caption">
-                                <h3>Ciencias</h3>
                                 <p>
-                                <a href="#ciencias-list" data-toggle="collapse"><img src="imagenes/ref-mate.jpg" alt="..."></a>
+                                <a href="#ciencias-list" data-toggle="collapse"><h3>Ciencias</h3><img src="imagenes/ref-ciencias.png" alt="..."></a>
                                 <div id="ciencias-list" class="collapse">
                                     <ul class="nav">
                                         <li><a href="" class="">Fisica</a></li>
                                         <li><a href="" class="">Quimica</a></li>
+                                        <li><a href="" class="">Biologia</a></li>
                                     </ul>
                                 </div>
                                 </p>
@@ -175,16 +175,18 @@
                              
                         </div>
 
-                        <div class="col-sm-6 col-md-3">
-                            <div class="thumbnail">
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="thumbnail" >
                               <div class="caption">
-                                <h3>Matematicas</h3>
                                 <p>
-                                <a href="#matematicas-list" data-toggle="collapse"><img src="imagenes/ref-mate.jpg" alt="..."></a>
+                                <a href="#matematicas-list" data-toggle="collapse"><h3>Matematicas</h3><img src="imagenes/ref-mate.png" alt="..."></a>
                                 <div id="matematicas-list" class="collapse">
                                     <ul class="nav">
                                         <li><a href="cursos/algebra.html" class="">Algebra</a></li>
                                         <li><a href="" class="">Aritmetica</a></li>
+                                        <li><a href="" class="">Razonamiento Matematico</a></li>
+                                        <li><a href="" class="">Geometria</a></li>
+                                        <li><a href="" class="">Trigonometria</a></li>
                                     </ul>
                                 </div>
                                 </p>
@@ -192,16 +194,67 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
                             <div class="thumbnail">
                               <div class="caption">
-                                <h3>Humanidades</h3>
                                 <p>
-                                <a href="#humanidades-list" data-toggle="collapse"><img src="imagenes/ref-mate.jpg" alt="..."></a>
+                                <a href="#humanidades-list" data-toggle="collapse"><h3>Humanidades</h3><img src="imagenes/ref-humanidades.png" alt="..."></a>
                                 <div id="humanidades-list" class="collapse">
                                     <ul class="nav">
                                         <li><a href="" class="">Ciencias Sociales</a></li>
-                                        <li><a href="" class="">Civida</a></li>
+                                        <li><a href="" class="">Civica</a></li>
+                                        <li><a href="" class="">Religion</a></li>
+                                    </ul>
+                                 </div>
+                                </p>
+                              </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                     <div class="row">
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="thumbnail">
+                              <div class="caption">
+                                <p>
+                                <a href="#comunicacion-list" data-toggle="collapse"><h3>Comunicacion</h3><img src="imagenes/ref-comunicacion.png" alt="..."></a>
+                                <div id="comunicacion-list" class="collapse">
+                                    <ul class="nav">
+                                        <li><a href="" class="">Comunicacion Integral</a></li>
+                                        <li><a href="" class="">Literatura</a></li>
+                                        <li><a href="" class="">Ingles</a></li>
+                                    </ul>
+                                </div>
+                                </p>
+                              </div>
+                            </div>
+                             
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="thumbnail">
+                              <div class="caption">
+                                <p>
+                                <a href="#deportes-list" data-toggle="collapse"><h3>Deportes</h3><img src="imagenes/ref-deportes.png" alt="..."></a>
+                                <div id="deportes-list" class="collapse">
+                                    <ul class="nav">
+                                        <li><a href="" class="">Educacion Fisica</a></li>
+                                    </ul>
+                                </div>
+                                </p>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-md-offset-1">
+                            <div class="thumbnail">
+                              <div class="caption">
+                                <p>
+                                <a href="#talleres-list" data-toggle="collapse"><h3>Talleres</h3><img src="imagenes/ref-talleres.png" alt="..."></a>
+                                <div id="talleres-list" class="collapse">
+                                    <ul class="nav">
+                                        <li><a href="" class="">Arte</a></li>
                                     </ul>
                                  </div>
                                 </p>
