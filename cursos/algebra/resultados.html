@@ -142,7 +142,7 @@
 
 					<!--Titulo-->
                     <p>
-                        <h1 class="text-center"><span class="label label-primary">Examen Virtual</span></h1>
+                        <h1 class="text-center"><span class="label label-primary">Resultados</span></h1>
                     </p>
                     <!--Fin Titulo-->
 
@@ -153,51 +153,59 @@
                             <li><a href="../../cursos.html"><span>Mis Cursos</span></a></li>
                             <li><a href="../../cursos.html"><span>Matematicas</span></a></li>
                             <li><a href="../algebra.html"><span>Algebra</span></a></li>
-                            <li class="active"><span>Rendir Examen</span></li>
+                            <li class="active"><span>Resultados</span></li>
                         </ol>
                     </div>
                     <!--Fin Breadcrumb-->
 
-                    <!--Examen-->
+                    <!--Resultados-->
                     <div class="panel panel-default">
-					 	<div class="panel-heading"><p class="text-center">
- 							<span>Algebra</span>
+					 	<div class="panel-heading"><p class="text-center text-info">
+ 							<span>Examen N°XX</span>
  						</p></div>
 
-					 	<div class="panel-heading"><p class="text-center text-primary">
- 							<span>¿Cuantas soluciones puede tener una ecuacion cuadratica?</span>
- 						</p></div>
+					 	<div class="panel-heading">
+					 		<div class="text-center text-primary">
+ 								<span>Curso: Algebra</span>
+ 								<br><br>
+ 								<span>Alumnno: Paolo Ramirez</span>
+ 								<br><br>
+ 								<span id="hora-inicio">Hora Inicio: 16:32</span>
+ 								<br><br>
+ 								<span id="hora-fin">Hora Fin: 16:32</span>
+ 								<br><br>
+ 								<span id="tiempo-transcurrido">Tiempo Transcurrido: 00:00:00</span>
+ 								<br><br>
+ 							</div>
+ 						</div>
 
 						<div class="panel-body">
 					  		<div class="row">
-					  			<div class="col-xs-3 col-md-offset-3">
-									Alternativa 1
+					  			<div class="col-xs-3 col-md-offset-1">
+									<span>Preguntas Correctas: 6</span>
 								</div>
-								<div class="col-xs-3 col-md-offset-3">
-								    Alternativa 3
+								<div class="col-xs-3 col-md-offset-1">
+								    <span>Preguntas Incorrectas: 3</span>
+								</div>
+								<div class="col-xs-3 col-md-offset-1">
+								    <span>Preguntas Sin Contestar: 1</span>
 								</div>
 					  		</div>
 					  		</br>
-					  		<div class="row">
-					  			<div class="col-xs-3 col-md-offset-3">
-									Alternativa 2
-								</div>
-								<div class="col-xs-3 col-md-offset-3">
-								    Alternativa 4
-								</div>
-					  		</div>
 						</div>
 
-						<div class="panel-footer"><p class="text-right text-info"><a href="">Anterior</a> 1/20 <a href="">Siguiente</a></p></div>						
+						<div class="panel-footer">
+							<p>
+								<h2 class="text-center text-info ">Calificacion: 12</h2>
+							</p>
+							<p class="text-right text-info">
+								<a href="../algebra.html" class="btn btn-default" role="button">Otra prueba</a>
+								<a href="resultados.html" class="btn btn-primary" role="button">Salir</a>
+							</p>
+						</div>						
 					</div>
 
-					<!--Resultados-->
-					<p class="text-center">
-						<a href="../algebra.html" class="btn btn-default" role="button">Cancelar</a> <a href="resultados.html" class="btn btn-primary" role="button">Finalizar</a>
-					</p>
 					<!--Fin Resultados-->
-
-                    <!--Fin-Examen-->
 
 				</div>
 			</div>
@@ -215,6 +223,7 @@
 	<script src="../../assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 	<script src="../../assets/vendor/chartist/js/chartist.min.js"></script>
 	<script src="../../assets/scripts/klorofil-common.js"></script>
+	
 	
 </body>  
 </html>
