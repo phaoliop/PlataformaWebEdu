@@ -8,7 +8,7 @@
   	<meta name="author" content="Paolo Ramirez">
   	<meta name="description" content="Plataforma web educativa">
   	<meta name="keywords" content="educacion, plataforma, colegio">
-	<title>Algebra</title>
+	<title>Mensajes</title>
 
 	<!-- VENDOR CSS -->
 	<link rel="stylesheet" href="../../assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -25,7 +25,74 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="../../assets/img/favicon.png">
 
+	<style type="text/css">
+		#chat {
+		  margin-bottom: 30px;
+		  width: 300px;
+		  height: 200px;
+		  overflow-y: auto
+		}
+	</style>
     <link rel="stylesheet" href="../../css/style.css">
+    <script type="text/javascript">//<![CDATA[
+		window.onload=function(){
+		(function() {
+		  var chatBox, message, sendButton, messageItem;
+
+		  chatBox = document.querySelector('#chat');
+		  message = document.querySelector('#message');
+		  sendButton = document.querySelector('#send-message');
+
+		  sendButton.addEventListener('click', function() {
+		    console.log(message.value);
+		    messageItem = document.createElement('li');
+		    imagen = document.createElement('img');
+		    imagen.setAttribute("src","../../imagenes/icon-user-msj.png");
+		    imagen.setAttribute("alt","Avatar");
+		    imagen.setAttribute("class","img-circle pull-left avatar");
+
+		    parrafo1 = document.createElement('p');
+		    parrafo2 = document.createElement('p');
+
+		    usuario = document.createElement('strong');
+		    dato_enlace = document.createTextNode('Usuario 1 ');
+
+		    contenido = document.createElement('span')
+
+		    tiempo = document.createElement('span');
+		    tiempo.setAttribute("class","timestamp");
+
+
+		    dato = document.createTextNode('2 minutes ago');
+		    
+
+		    contenido.innerHTML = message.value
+		      .replace('<', '&lt;')
+		      .replace('>', '&gt;')
+		      .replace('"', '&quot;');
+
+
+		    messageItem.appendChild(imagen);
+		    usuario.appendChild(dato_enlace);
+		    parrafo1.appendChild(usuario);
+		    messageItem.appendChild(parrafo1);
+
+		    tiempo.appendChild(dato);
+		    parrafo2.appendChild(contenido);
+		    parrafo2.appendChild(tiempo);
+		    messageItem.appendChild(parrafo2);
+		    
+
+		    document.getElementById('conversacion').appendChild(messageItem);
+
+		    // aca lo interesante
+		    chatBox.scrollTop = chatBox.scrollHeight;
+		  });
+
+		})();
+
+		}//]]> 
+	</script>
     
 </head>  
 <body>  
@@ -139,7 +206,6 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-
                     <!--Breadcrumb-->
                     <div>
                         <ol class="breadcrumb">
@@ -150,12 +216,70 @@
                         </ol>
                     </div>
                     <!--Fin Breadcrumb-->
-                    <!--Titulo-->
-                    <p>
-                        <h1 class="text-left text-primary""><span style="padding-right: 10px">Mensajes </span><i class="glyphicon glyphicon-envelope"></i></h1>
-                    </p>
-                    <!--Fin Titulo-->
-
+                    <!-- TIMELINE -->
+					<div class="panel panel-scrolling">
+						<div class="panel-heading">
+							<h3 class="panel-title">Un tal asunto 1</h3>
+							<div class="right">
+								<a href="#message"><button type="button"><span style="padding-right: 10px;">Responder</span><i class="lnr lnr-undo"></i></button></a>
+								<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+							</div>
+						</div>
+						<div class="panel-body" id="chat">
+							<!--button type="button" class="btn btn-primary btn-bottom center-block">Load More</button-->
+							<ul class="list-unstyled activity-list" id="conversacion">
+								<li>
+									<img src="../../imagenes/icon-user-msj.png" alt="Avatar" class="img-circle pull-left avatar">
+									<p>
+										<strong>Profesor 1</strong>
+									</p>
+									<p>
+										<span>has achieved 80% of his completed tasks</span>
+										<span class="timestamp">20 minutes ago</span>
+									</p>
+								</li>
+								<li>
+									<img src="../../imagenes/icon-user-msj.png" alt="Avatar" class="img-circle pull-left avatar">
+									<p>
+										<strong>Profesor 1</strong>
+									</p>
+									<p>
+										<span>has achieved 80% of his completed tasks</span>
+										<span class="timestamp">20 minutes ago</span>
+									</p>
+								</li>
+								<li>
+									<img src="../../imagenes/icon-user-msj.png" alt="Avatar" class="img-circle pull-left avatar">
+									<p>
+										<strong>Profesor 1</strong>
+									</p>
+									<p>
+										<span>has achieved 80% of his completed tasks</span>
+										<span class="timestamp">20 minutes ago</span>
+									</p>
+								</li>
+								<li>
+									<img src="../../imagenes/icon-user-msj.png" alt="Avatar" class="img-circle pull-left avatar">
+									<p>
+										<strong>Profesor 1</strong>
+									</p>
+									<p>
+										<span>has achieved 80% of his completed tasks</span>
+										<span class="timestamp">20 minutes ago</span>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<p>
+								<h3>Responder a este mensaje: </h3>
+						</p>
+						<textarea class="form-control" rows="5" id="message" placeholder="Escriba su respuesta a este mensaje"></textarea> 
+						<button id="send-message">Enviar mensaje</button>
+						
+					</div>
+					<!-- END TIMELINE -->
+					
+					
 
 				</div>
 			</div>
@@ -173,7 +297,15 @@
 	<script src="../../assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 	<script src="../../assets/vendor/chartist/js/chartist.min.js"></script>
 	<script src="../../assets/scripts/klorofil-common.js"></script>
-	
+	<script>
+	// tell the embed parent frame the height of the content
+	if (window.parent && window.parent.parent){
+    	window.parent.parent.postMessage(["resultsFrame", {
+      	height: document.body.getBoundingClientRect().height,
+      	slug: "None"
+		}], "*")
+	}
+	</script>
 	
 </body>  
 </html>
